@@ -11,8 +11,8 @@ window.EVENT = {
   dateLong: "Friday, December 18, 2026", // TODO
   timeRange: "Time TBA", // TODO
   venueName: "CORBETT'S",
-  venueAddress: "340 N. 6th Ave, Tucson, AZ 85705",
-  venueBlurb: "Downtown Tucson's restaurant, bar & pickleball club. Paddles up, collars popped!",
+  venueAddress: "340 N. 6th Avenue, Tucson, AZ 85705",
+  venueBlurb: "Local cuisine, a beer garden and pickleball courts inside the Historic Corbett Building in downtown Tucson. Free parking for guests.",
   venueUrl: "https://corbettstucson.com/",
   venueMapUrl: "https://www.google.com/maps/search/?api=1&query=CORBETT%27S+340+N+6th+Ave+Tucson+AZ+85705",
   signageEventName: "Allied Elite Financial Holiday Party",
