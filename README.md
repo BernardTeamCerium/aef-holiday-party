@@ -1,6 +1,6 @@
-# AEF Saved by the Bell Holiday Party
+# AEF Preppy Holiday Party
 
-Static sponsorship campaign site for Allied Elite Financial's 90s *Saved by the Bell* themed holiday party.
+Static sponsorship campaign site for Allied Elite Financial's '80s Preppy themed holiday party.
 
 ## Editing
 All event details live in **`config.js`**: date/time (drives the countdown), venue, contact email, and the

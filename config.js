@@ -26,7 +26,7 @@ window.EVENT = {
   tiers: [
     {
       name: "Double Diamond",
-      nickname: "The Max",
+      nickname: "The Country Club",
       price: "$7,500",
       available: 1, // TODO: confirm count
       color: "pink",
@@ -42,10 +42,10 @@ window.EVENT = {
     },
     {
       name: "Diamond",
-      nickname: "Bayside Tigers",
+      nickname: "The Yacht Club",
       price: "$5,000",
       available: 1, // TODO
-      color: "teal",
+      color: "green",
       perks: [
         "AEF Sportscoat / QuarterZip / Polo",
         "Private Invitation to Event",
@@ -56,10 +56,10 @@ window.EVENT = {
     },
     {
       name: "Platinum",
-      nickname: "Zack Attack",
+      nickname: "Popped Collar",
       price: "$3,500",
       available: 5, // TODO
-      color: "yellow",
+      color: "navy",
       perks: [
         "AEF Sportscoat / QuarterZip",
         "Platinum-tier event signage"
@@ -69,10 +69,10 @@ window.EVENT = {
     },
     {
       name: "Gold",
-      nickname: "The Hot Sundaes",
+      nickname: "Argyle",
       price: "$2,500",
       available: 10, // TODO
-      color: "purple",
+      color: "gold",
       perks: [
         "AEF QuarterZip / Polo",
         "Gold-tier event signage"
@@ -82,7 +82,7 @@ window.EVENT = {
     },
     {
       name: "Silver",
-      nickname: "Hall Pass",
+      nickname: "Boat Shoes",
       price: "$1,000",
       available: 18, // TODO
       color: "blue",
