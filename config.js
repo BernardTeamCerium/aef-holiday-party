@@ -29,7 +29,7 @@ window.EVENT = {
       nickname: "The Country Club",
       price: "$7,500",
       available: 1, // TODO: confirm count
-      color: "pink",
+      color: "navy",
       featured: true,
       perks: [
         "Featured as Sponsor for the event",
@@ -45,7 +45,7 @@ window.EVENT = {
       nickname: "The Yacht Club",
       price: "$5,000",
       available: 1, // TODO
-      color: "green",
+      color: "blue",
       perks: [
         "AEF Sportscoat / QuarterZip / Polo",
         "Private Invitation to Event",
@@ -59,7 +59,7 @@ window.EVENT = {
       nickname: "Popped Collar",
       price: "$3,500",
       available: 5, // TODO
-      color: "navy",
+      color: "cyan",
       perks: [
         "AEF Sportscoat / QuarterZip",
         "Platinum-tier event signage"
@@ -72,7 +72,7 @@ window.EVENT = {
       nickname: "Argyle",
       price: "$2,500",
       available: 10, // TODO
-      color: "gold",
+      color: "aqua",
       perks: [
         "AEF QuarterZip / Polo",
         "Gold-tier event signage"
@@ -85,7 +85,7 @@ window.EVENT = {
       nickname: "Boat Shoes",
       price: "$1,000",
       available: 18, // TODO
-      color: "blue",
+      color: "mint",
       perks: [
         "AEF Polo",
         "Silver-tier event signage"

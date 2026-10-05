@@ -13,3 +13,8 @@ sponsorship tiers (price, spots available, perks, Stripe payment links). Values 
 ## Running
 No build step. Open `index.html` in a browser, or upload the folder (`index.html`, `styles.css`, `script.js`,
 `config.js`, `assets/`) to any static host or a WordPress page.
+
+## Logo files
+- `assets/aef-logo.png`: full logo, transparent background (for light backgrounds)
+- `assets/aef-logo-white.png`: full logo with white wordmark (for the navy footer)
+- `assets/aef-mark.png`: AE mark only (nav bar and browser tab icon)
