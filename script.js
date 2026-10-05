@@ -17,6 +17,13 @@
     el.href = "mailto:" + E[el.getAttribute("data-field-href")];
   });
 
+  document.querySelectorAll("[data-href]").forEach(function (el) {
+    var v = E[el.getAttribute("data-href")];
+    if (v) el.href = v; else el.remove();
+  });
+  var venueLinks = document.querySelector(".card__links");
+  if (venueLinks && !venueLinks.querySelector("a")) venueLinks.remove();
+
   // Sponsorship tiers
   document.getElementById("tiers").innerHTML = E.tiers.map(function (t, i) {
     var soldOut = t.available === 0;

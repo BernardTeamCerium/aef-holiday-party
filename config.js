@@ -10,10 +10,11 @@ window.EVENT = {
   startISO: "2026-12-18T18:00:00", // TODO: confirm date & start time
   dateLong: "Friday, December 18, 2026", // TODO
   timeRange: "Time TBA", // TODO
-  // Last year: The Leo Kent Hotel, 1 S. Church Ave, Tucson, AZ 85701
-  venueName: "Venue TBA", // TODO
-  venueAddress: "Address TBA", // TODO
-  venueBlurb: "", // optional short description of the venue
+  venueName: "CORBETT'S",
+  venueAddress: "340 N. 6th Ave, Tucson, AZ 85705",
+  venueBlurb: "Downtown Tucson's restaurant, bar & pickleball club. Paddles up, collars popped!",
+  venueUrl: "https://corbettstucson.com/",
+  venueMapUrl: "https://www.google.com/maps/search/?api=1&query=CORBETT%27S+340+N+6th+Ave+Tucson+AZ+85705",
   signageEventName: "Allied Elite Financial Holiday Party",
   contactEmail: "events@alliedelitefinancial.com", // TODO: confirm inbox for the contact form
 
