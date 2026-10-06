@@ -130,7 +130,7 @@
       form.reset();
       syncBondNote();
       status.className = "form__status is-success";
-      status.textContent = "Thanks! Your message is in. Our events team will be in touch soon.";
+      status.textContent = "Thanks! Your request is in. Our events team will be in touch soon.";
     }).catch(function (err) {
       // 404 = Netlify hasn't detected the form (form detection off, or the site
       // was deployed before it was turned on). Never lose the request: offer email.
