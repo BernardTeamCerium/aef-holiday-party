@@ -29,7 +29,7 @@ window.EVENT = {
     {
       name: "Double Diamond",
       nickname: "The Country Club",
-      price: "$7,500",
+      price: "$10,000",
       available: 1, // TODO: confirm count
       color: "navy",
       featured: true,
