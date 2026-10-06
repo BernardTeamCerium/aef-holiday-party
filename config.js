@@ -21,8 +21,9 @@ window.EVENT = {
   /*
    * Sponsorship tiers (carried over from last year's packages).
    * available: number of spots left (0 shows "Sold Out" and disables the button).
-   * creditCardLink / bondAccountLink: this year's Stripe payment links.
+   * creditCardLink: this year's Stripe payment link for "Pay by Credit Card".
    *   Leave blank ("") and that button falls back to the contact form.
+   * "Pay by Bond Account" always goes to the contact form with Bond Account selected.
    */
   tiers: [
     {
@@ -38,8 +39,7 @@ window.EVENT = {
         "Private Invitation to The Event",
         "Top-tier event signage"
       ],
-      creditCardLink: "https://buy.stripe.com/28EeVedsIfJUfLw7BD1RC0b",
-      bondAccountLink: "" // TODO
+      creditCardLink: "https://buy.stripe.com/28EeVedsIfJUfLw7BD1RC0b"
     },
     {
       name: "Diamond",
@@ -52,8 +52,7 @@ window.EVENT = {
         "Private Invitation to Event",
         "Diamond-tier event signage"
       ],
-      creditCardLink: "",
-      bondAccountLink: ""
+      creditCardLink: ""
     },
     {
       name: "Platinum",
@@ -65,8 +64,7 @@ window.EVENT = {
         "AEF Sportscoat / QuarterZip",
         "Platinum-tier event signage"
       ],
-      creditCardLink: "",
-      bondAccountLink: ""
+      creditCardLink: ""
     },
     {
       name: "Gold",
@@ -78,8 +76,7 @@ window.EVENT = {
         "AEF QuarterZip / Polo",
         "Gold-tier event signage"
       ],
-      creditCardLink: "",
-      bondAccountLink: ""
+      creditCardLink: ""
     },
     {
       name: "Silver",
@@ -91,8 +88,7 @@ window.EVENT = {
         "AEF Polo",
         "Silver-tier event signage"
       ],
-      creditCardLink: "",
-      bondAccountLink: ""
+      creditCardLink: ""
     }
   ]
 };

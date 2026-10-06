@@ -371,6 +371,10 @@ a { color: var(--blue); }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 3px solid rgba(29,211,252,.35); border-color: var(--blue); }
 .form .btn { align-self: flex-start; margin-top: .5rem; }
 .form .btn:disabled { opacity: .6; cursor: wait; }
+.form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form__bond-note { margin: 0; padding: .9rem 1rem; background: var(--aqua-soft); border-left: 5px solid var(--aqua); border-radius: 6px; font-size: .92rem; }
+.form__bond-note[hidden] { display: none; }
+@media (max-width: 560px) { .form__row { grid-template-columns: 1fr; } }
 .form__hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form__status { margin: 0; font-weight: 600; min-height: 1.5em; }
 .form__status.is-success { color: #0a7d5a; }

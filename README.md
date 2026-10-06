@@ -7,8 +7,10 @@ All event details live in **`config.js`**: date/time (drives the countdown), ven
 sponsorship tiers (price, spots available, perks, Stripe payment links). Values marked `TODO` need confirming.
 
 - Set `available: 0` on a tier to show it as **Sold Out**.
-- Add this year's Stripe links to `creditCardLink` / `bondAccountLink`. Until a link is set, that payment
-  button sends the visitor to the contact form with the subject pre-filled.
+- Add this year's Stripe links to each tier's `creditCardLink`. Until a link is set, "Pay by Credit Card"
+  sends the visitor to the contact form instead.
+- "Pay by Bond Account" always sends the visitor to the contact form with the package and
+  "Bond Account" pre-selected.
 
 ## Running
 No build step. Open `index.html` in a browser, or upload the folder (`index.html`, `styles.css`, `script.js`,

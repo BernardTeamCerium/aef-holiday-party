@@ -135,13 +135,25 @@
     <!-- CONTACT -->
     <section id="contact" class="section">
       <h2 class="section__title"><small>Ring the clubhouse</small><span>Contact Us</span></h2>
-      <p class="section__lead">Questions about a package or paying by bond account? Send us a note and the events team will get back to you.</p>
+      <p class="section__lead">Paying by bond account, or have a question about a package? Send us a note and the events team will get back to you.</p>
       <form class="form form--narrow" id="contact-form" name="sponsor-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="sponsor-contact">
         <p class="form__hp" aria-hidden="true"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <label>Full Name<input name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
         <label>Phone Number<input type="tel" name="phone" autocomplete="tel"></label>
+        <div class="form__row">
+          <label>Sponsorship Package<select name="package" id="contact-package"></select></label>
+          <label>Payment Method
+            <select name="payment" id="contact-payment">
+              <option value="">Select one</option>
+              <option value="Credit Card">Credit Card</option>
+              <option value="Bond Account">Bond Account</option>
+              <option value="Not sure yet">Not sure yet / Just a question</option>
+            </select>
+          </label>
+        </div>
+        <p class="form__bond-note" id="bond-note" hidden><strong>Paying by bond account?</strong> Submit this form to reserve your spot. Our events team will follow up to confirm your sponsorship and complete the bond account payment.</p>
         <label>Subject<input name="subject" id="contact-subject"></label>
         <label>Message<textarea name="message" rows="4"></textarea></label>
         <button class="btn" type="submit">Submit Now</button>
@@ -181,7 +193,7 @@
     <p>How would you like to pay?</p>
     <div class="modal__actions">
       <a class="btn btn--block" id="pay-card" href="#" target="_blank" rel="noopener">Pay by Credit Card</a>
-      <a class="btn btn--block btn--alt" id="pay-bond" href="#" target="_blank" rel="noopener">Pay by Bond Account</a>
+      <a class="btn btn--block btn--alt" id="pay-bond" href="#contact">Pay by Bond Account</a>
     </div>
     <p class="modal__note" id="claim-note"></p>
   </dialog>
