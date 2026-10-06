@@ -68,9 +68,12 @@
     document.getElementById("claim-price").textContent = t.price;
     setPay(payCard, t.creditCardLink, t, "Credit Card");
     setPay(payBond, t.bondAccountLink, t, "Bond Account");
-    document.getElementById("claim-note").textContent = (t.creditCardLink && t.bondAccountLink)
-      ? "Payment opens in a secure Stripe checkout in a new tab."
-      : "Online payment is coming soon. Choose a method and send us a note to reserve your spot.";
+    var card = !!t.creditCardLink, bond = !!t.bondAccountLink;
+    document.getElementById("claim-note").textContent =
+      card && bond ? "Payment opens in a secure Stripe checkout in a new tab." :
+      card ? "Credit card opens a secure Stripe checkout in a new tab. For bond account, send us a note to reserve your spot." :
+      bond ? "Bond account opens a secure Stripe checkout in a new tab. For credit card, send us a note to reserve your spot." :
+      "Online payment is coming soon. Choose a method and send us a note to reserve your spot.";
     modal.showModal();
   });
   modal.querySelector(".modal__close").addEventListener("click", function () { modal.close(); });

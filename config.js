@@ -38,7 +38,7 @@ window.EVENT = {
         "Private Invitation to The Event",
         "Top-tier event signage"
       ],
-      creditCardLink: "", // TODO
+      creditCardLink: "https://buy.stripe.com/28EeVedsIfJUfLw7BD1RC0b",
       bondAccountLink: "" // TODO
     },
     {
