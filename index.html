@@ -136,14 +136,24 @@
     <section id="contact" class="section">
       <h2 class="section__title"><small>Ring the clubhouse</small><span>Contact Us</span></h2>
       <p class="section__lead">Paying by bond account, or have a question about a package? Send us a note and the events team will get back to you.</p>
-      <form class="form form--narrow" id="contact-form" name="sponsor-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <form class="form form--narrow" id="contact-form" name="sponsor-contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="sponsor-contact">
         <p class="form__hp" aria-hidden="true"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <label>Full Name<input name="name" required autocomplete="name"></label>
         <label>Email<input type="email" name="email" required autocomplete="email"></label>
         <label>Phone Number<input type="tel" name="phone" autocomplete="tel"></label>
         <div class="form__row">
-          <label>Sponsorship Package<select name="package" id="contact-package"></select></label>
+          <label>Sponsorship Package
+            <select name="package" id="contact-package">
+              <option value="">Select a package</option>
+              <option value="Double Diamond">Double Diamond ($7,500)</option>
+              <option value="Diamond">Diamond ($5,000)</option>
+              <option value="Platinum">Platinum ($3,500)</option>
+              <option value="Gold">Gold ($2,500)</option>
+              <option value="Silver">Silver ($1,000)</option>
+              <option value="General question">General question</option>
+            </select>
+          </label>
           <label>Payment Method
             <select name="payment" id="contact-payment">
               <option value="">Select one</option>

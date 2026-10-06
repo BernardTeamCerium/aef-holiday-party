@@ -379,6 +379,7 @@ a { color: var(--blue); }
 .form__status { margin: 0; font-weight: 600; min-height: 1.5em; }
 .form__status.is-success { color: #0a7d5a; }
 .form__status.is-error { color: #b42318; }
+.link-btn { background: none; border: 0; padding: 0; font: inherit; color: var(--blue); text-decoration: underline; cursor: pointer; }
 
 /* ---------- Policy ---------- */
 .policy {

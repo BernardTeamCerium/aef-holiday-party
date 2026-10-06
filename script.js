@@ -126,14 +126,19 @@
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(data).toString()
     }).then(function (res) {
-      if (!res.ok) throw new Error(res.status);
+      if (!res.ok) throw res.status;
       form.reset();
       syncBondNote();
       status.className = "form__status is-success";
       status.textContent = "Thanks! Your message is in. Our events team will be in touch soon.";
-    }).catch(function () {
+    }).catch(function (err) {
+      // 404 = Netlify hasn't detected the form (form detection off, or the site
+      // was deployed before it was turned on). Never lose the request: offer email.
+      console.error("Form submission failed:", err);
       status.className = "form__status is-error";
-      status.innerHTML = 'Sorry, that didn\'t go through. Please email <a href="mailto:' + esc(E.contactEmail) + '">' + esc(E.contactEmail) + '</a>.';
+      status.innerHTML = "Sorry, that didn't go through" + (typeof err === "number" ? " (error " + err + ")" : "") +
+        '. <button type="button" class="link-btn" id="send-by-email">Send it by email instead</button>';
+      document.getElementById("send-by-email").addEventListener("click", function () { mailtoFallback(data); });
     }).then(function () { submitBtn.disabled = false; });
   });
 
