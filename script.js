@@ -76,14 +76,43 @@
   modal.querySelector(".modal__close").addEventListener("click", function () { modal.close(); });
   modal.addEventListener("click", function (e) { if (e.target === modal) modal.close(); });
 
-  // Contact form → mailto
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var data = new FormData(e.target), lines = [];
-    data.forEach(function (v, k) { lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v); });
+  // Contact form → Netlify Forms (falls back to email when not hosted on Netlify)
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("contact-status");
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  function mailtoFallback(data) {
+    var lines = [];
+    data.forEach(function (v, k) {
+      if (k === "form-name" || k === "bot-field") return;
+      lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ": " + v);
+    });
     window.location.href = "mailto:" + E.contactEmail +
       "?subject=" + encodeURIComponent(data.get("subject") || "Holiday Party Sponsorship") +
       "&body=" + encodeURIComponent(lines.join("\n"));
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+    if (location.protocol === "file:") { mailtoFallback(data); return; }
+
+    submitBtn.disabled = true;
+    status.className = "form__status";
+    status.textContent = "Sending...";
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString()
+    }).then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      status.className = "form__status is-success";
+      status.textContent = "Thanks! Your message is in. Our events team will be in touch soon.";
+    }).catch(function () {
+      status.className = "form__status is-error";
+      status.innerHTML = 'Sorry, that didn\'t go through. Please email <a href="mailto:' + esc(E.contactEmail) + '">' + esc(E.contactEmail) + '</a>.';
+    }).then(function () { submitBtn.disabled = false; });
   });
 
   // Countdown

@@ -18,3 +18,9 @@ No build step. Open `index.html` in a browser, or upload the folder (`index.html
 - `assets/aef-logo.png`: full logo, transparent background (for light backgrounds)
 - `assets/aef-logo-white.png`: full logo with white wordmark (for the navy footer)
 - `assets/aef-mark.png`: AE mark only (nav bar and browser tab icon)
+
+## Contact form (Netlify Forms)
+The contact form posts to Netlify Forms (form name `sponsor-contact`) and shows a thank-you message on the
+page. In Netlify: **Forms → Enable form detection**, redeploy, then add an email under
+**Site configuration → Notifications → Emails and webhooks → Form submission notifications**.
+When the page is opened as a local file it falls back to opening an email to `contactEmail`.
