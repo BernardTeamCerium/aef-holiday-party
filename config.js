@@ -88,7 +88,7 @@ window.EVENT = {
         "AEF Polo",
         "Silver-tier event signage"
       ],
-      creditCardLink: ""
+      creditCardLink: "https://buy.stripe.com/5kA7vb2iLfyv6VaeUX"
     }
   ]
 };
