@@ -76,7 +76,7 @@ window.EVENT = {
         "AEF QuarterZip / Polo",
         "Gold-tier event signage"
       ],
-      creditCardLink: ""
+      creditCardLink: "https://buy.stripe.com/3cIbJ22O4apA0QC09b1RC08"
     },
     {
       name: "Silver",
