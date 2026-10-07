@@ -7,9 +7,9 @@
 window.EVENT = {
   year: "2026",
   // Countdown target in Tucson time (Arizona is UTC-7 all year, no daylight saving).
-  startISO: "2026-12-11T18:00:00-07:00", // TODO: confirm start time (6 PM placeholder)
+  startISO: "2026-12-11T19:30:00-07:00",
   dateLong: "Friday, December 11, 2026",
-  timeRange: "Time TBA", // TODO
+  timeRange: "7:30 PM – 11:30 PM",
   venueName: "CORBETT'S",
   venueAddress: "340 N. 6th Avenue, Tucson, AZ 85705",
   venueBlurb: "Local cuisine, a beer garden and pickleball courts inside the Historic Corbett Building in downtown Tucson. Free parking for guests.",
