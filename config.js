@@ -6,9 +6,9 @@
  */
 window.EVENT = {
   year: "2026",
-  // ISO date/time used for the countdown (venue local time).
-  startISO: "2026-12-18T18:00:00", // TODO: confirm date & start time
-  dateLong: "Friday, December 18, 2026", // TODO
+  // Countdown target in Tucson time (Arizona is UTC-7 all year, no daylight saving).
+  startISO: "2026-12-11T18:00:00-07:00", // TODO: confirm start time (6 PM placeholder)
+  dateLong: "Friday, December 11, 2026",
   timeRange: "Time TBA", // TODO
   venueName: "CORBETT'S",
   venueAddress: "340 N. 6th Avenue, Tucson, AZ 85705",
