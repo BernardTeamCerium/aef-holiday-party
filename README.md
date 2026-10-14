@@ -31,4 +31,6 @@ When the page is opened as a local file it falls back to opening an email to `co
 `flyer/` holds a shareable event flyer (no sponsorship info): `aef-preppy-holiday-party-flyer.png`
 (1080x1350 at 2x, for social/email) and `aef-preppy-holiday-party-flyer.pdf` (8.5x11 print).
 Edit `flyer/flyer.html`, then re-render with `node flyer/render.js` (needs the `playwright` package).
-Fonts are bundled in `flyer/fonts/` so it renders offline. The flyer is not part of the Netlify upload.
+Fonts are bundled in `flyer/fonts/` so it renders offline. Venue photos live in `flyer/photos/`; to swap the
+"The Look" illustration for a real photo, save it as `flyer/photos/the-look.jpg` and re-render.
+The flyer is not part of the Netlify upload.
