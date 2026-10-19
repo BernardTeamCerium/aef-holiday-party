@@ -6,8 +6,6 @@
   <!--
     Promotional flyer (no sponsorship info). Rendered to PNG / PDF with
     render.js. ?size=social → 1080x1350, ?size=letter → 8.5x11 in.
-    To use a real photo for "The Look", save it as photos/the-look.jpg;
-    it replaces the illustration automatically.
   -->
   <link rel="stylesheet" href="fonts/fonts.css">
   <style>
@@ -34,19 +32,20 @@
 
     /* ---------- Photo hero ---------- */
     .hero {
-      position: absolute; inset: 0 0 auto 0; height: 860px;
-      background: url(photos/corbetts-sign.jpg) 30% 38% / cover no-repeat;
+      position: absolute; inset: 0 0 auto 0; height: 880px;
+      background: url(photos/preppy-group.jpg) 50% 12% / cover no-repeat;
     }
     .hero::after {
       content: ""; position: absolute; inset: 0;
       background:
-        linear-gradient(180deg, rgba(11,2,40,.62) 0%, rgba(11,2,40,.05) 20%, rgba(11,2,40,.08) 42%, rgba(11,2,40,.7) 72%, var(--navy) 100%),
-        linear-gradient(120deg, rgba(0,245,160,.12) 0%, rgba(29,211,252,0) 45%, rgba(46,139,255,.22) 100%);
+        linear-gradient(180deg, rgba(11,2,40,.82) 0%, rgba(11,2,40,.35) 16%, rgba(11,2,40,0) 30%, rgba(11,2,40,.5) 52%, rgba(11,2,40,.92) 80%, var(--navy) 100%),
+        linear-gradient(90deg, rgba(11,2,40,.45) 0%, rgba(11,2,40,0) 55%),
+        linear-gradient(120deg, rgba(0,245,160,.10) 0%, rgba(29,211,252,0) 45%, rgba(46,139,255,.18) 100%);
     }
 
     /* Argyle panel behind the lower half */
     .argyle {
-      position: absolute; inset: 820px 0 0 0;
+      position: absolute; inset: 840px 0 0 0;
       background-color: var(--navy);
       background-image:
         linear-gradient(rgba(11,2,40,.86), rgba(11,2,40,.86)),
@@ -71,22 +70,22 @@
     }
 
     /* ---------- Title ---------- */
-    .title { position: absolute; left: 56px; top: 300px; width: 640px; margin: 0; font-weight: 400; }
-    .t-script { display: block; font-family: var(--script); font-weight: 700; font-size: 96px; line-height: 1; color: var(--cyan); transform: rotate(-6deg); margin-left: 8px; text-shadow: 0 4px 18px rgba(0,0,0,.5); }
+    .title { position: absolute; left: 56px; top: 436px; width: 760px; margin: 0; font-weight: 400; }
+    .t-script { display: block; font-family: var(--script); font-weight: 700; font-size: 84px; line-height: 1; color: var(--cyan); transform: rotate(-6deg); margin-left: 8px; text-shadow: 0 4px 18px rgba(0,0,0,.5); }
     .t-big {
       display: block; font-family: var(--serif); font-style: italic; font-weight: 900;
-      font-size: 178px; line-height: .9; letter-spacing: -.025em; color: var(--paper);
+      font-size: 164px; line-height: .9; letter-spacing: -.025em; color: var(--paper);
       text-shadow: 6px 6px 0 var(--aqua), 12px 12px 0 var(--blue), 0 20px 40px rgba(0,0,0,.45);
       margin-top: -6px;
     }
     .t-small {
-      display: inline-block; margin-top: 30px;
-      font-family: var(--serif); font-weight: 700; font-size: 58px; line-height: 1.25;
+      display: inline-block; margin-top: 26px;
+      font-family: var(--serif); font-weight: 700; font-size: 50px; line-height: 1.25;
       color: var(--navy); background: var(--paper);
       padding: 2px 26px 6px; border-radius: 4px;
       box-shadow: 8px 8px 0 var(--aqua);
     }
-    .soiree { position: absolute; left: 60px; top: 742px; margin: 0; font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 34px; color: var(--paper); }
+    .soiree { position: absolute; left: 60px; top: 796px; margin: 0; font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 34px; color: var(--paper); }
     .soiree span { color: var(--cyan); font-style: normal; }
 
     /* ---------- Polaroids ---------- */
@@ -96,24 +95,17 @@
     }
     .polaroid .img { width: 100%; background-size: cover; background-position: center; overflow: hidden; }
     .polaroid figcaption { font-family: var(--script); font-weight: 700; font-size: 34px; color: var(--navy); text-align: center; padding: 8px 0 12px; line-height: 1.1; }
-    .polaroid--look { right: 58px; top: 196px; width: 330px; transform: rotate(5deg); }
-    .polaroid--look .img { height: 360px; }
-    .polaroid--venue { right: 70px; top: 760px; width: 370px; transform: rotate(-4deg); z-index: 2; }
-    .polaroid--venue .img { height: 250px; background-image: url(photos/corbetts-aerial.jpg); }
+    .polaroid--venue { right: 64px; top: 834px; width: 360px; transform: rotate(-4deg); z-index: 2; }
+    .polaroid--venue .img { height: 196px; background-image: url(photos/corbetts-aerial.jpg); }
     .tape { position: absolute; top: -18px; left: 50%; width: 120px; height: 36px; transform: translateX(-50%) rotate(-3deg); background: rgba(29,211,252,.55); }
     .polaroid--venue .tape { background: rgba(0,245,160,.5); transform: translateX(-50%) rotate(4deg); }
 
-    .look-art { width: 100%; height: 100%; display: block; }
-    .look-photo { display: none; width: 100%; height: 100%; object-fit: cover; }
-    .has-photo .look-art { display: none; }
-    .has-photo .look-photo { display: block; }
-
     /* ---------- Details ---------- */
-    .details { position: absolute; left: 60px; top: 840px; width: 560px; }
-    .row { display: flex; align-items: baseline; gap: 18px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+    .details { position: absolute; left: 60px; top: 862px; width: 560px; }
+    .row { display: flex; align-items: baseline; gap: 18px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
     .row:last-child { border-bottom: 0; }
     .row small { flex: none; width: 92px; font-size: 16px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--cyan); }
-    .row strong { font-family: var(--serif); font-weight: 900; font-size: 40px; line-height: 1.1; }
+    .row strong { font-family: var(--serif); font-weight: 900; font-size: 38px; line-height: 1.1; }
     .row em { display: block; font-style: normal; font-size: 20px; color: #cfd2ff; margin-top: 4px; font-weight: 400; }
 
     .dress {
@@ -155,7 +147,7 @@
 </head>
 <body>
   <div class="flyer">
-    <div class="hero" role="img" aria-label="CORBETT'S sign in downtown Tucson"></div>
+    <div class="hero" role="img" aria-label="Friends dressed in '80s preppy style"></div>
     <div class="argyle" aria-hidden="true"></div>
 
     <img class="logo" src="../assets/aef-logo-white.png" alt="Allied Elite Financial, an AmeriLife company">
@@ -168,61 +160,6 @@
     </h1>
     <p class="soiree">An &rsquo;80s Country Club Soir&eacute;e <span>✦</span></p>
 
-    <figure class="polaroid polaroid--look" id="look">
-      <span class="tape" aria-hidden="true"></span>
-      <div class="img">
-        <img class="look-photo" src="photos/the-look.jpg" alt="Guest dressed in '80s preppy style"
-             onload="document.getElementById('look').classList.add('has-photo')" onerror="this.remove()">
-        <!-- Illustration: popped-collar polo with a sweater tied over the shoulders -->
-        <svg class="look-art" viewBox="0 0 300 360" role="img" aria-label="Preppy outfit illustration">
-          <defs>
-            <pattern id="arg" width="60" height="100" patternUnits="userSpaceOnUse">
-              <rect width="60" height="100" fill="#e4f3ff"/>
-              <path d="M30 0 L60 50 L30 100 L0 50 Z" fill="#dcfaf4"/>
-              <path d="M0 0 L60 100 M60 0 L0 100" stroke="#b9d9f5" stroke-width="1"/>
-            </pattern>
-            <pattern id="cable" width="16" height="16" patternUnits="userSpaceOnUse">
-              <rect width="16" height="16" fill="#1a1145"/>
-              <path d="M2 0 Q8 8 2 16 M14 0 Q8 8 14 16" stroke="#2e2a6b" stroke-width="3" fill="none"/>
-            </pattern>
-            <linearGradient id="poloG" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#3ff7d6"/><stop offset="1" stop-color="#0ec5d8"/>
-            </linearGradient>
-          </defs>
-          <rect width="300" height="360" fill="url(#arg)"/>
-          <!-- polo body -->
-          <path d="M92 92 L56 110 L28 164 L64 182 L86 148 L86 330 L214 330 L214 148 L236 182 L272 164 L244 110 L208 92 Z" fill="url(#poloG)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <!-- sleeve cuffs -->
-          <path d="M28 164 L64 182" stroke="#0b0228" stroke-width="10" stroke-linecap="round"/>
-          <path d="M236 182 L272 164" stroke="#0b0228" stroke-width="10" stroke-linecap="round"/>
-          <!-- placket -->
-          <rect x="141" y="100" width="18" height="70" fill="#0ec5d8" stroke="#0b0228" stroke-width="3"/>
-          <circle cx="150" cy="122" r="4" fill="#fff" stroke="#0b0228" stroke-width="2"/>
-          <circle cx="150" cy="148" r="4" fill="#fff" stroke="#0b0228" stroke-width="2"/>
-          <!-- popped collar -->
-          <path d="M118 92 Q150 72 182 92 L176 66 Q150 52 124 66 Z" fill="#ffffff" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M146 98 L108 96 L98 54 L126 66 Z" fill="#ffffff" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M154 98 L192 96 L202 54 L174 66 Z" fill="#ffffff" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <!-- sweater over the shoulders -->
-          <path d="M58 112 Q150 62 242 112 L236 136 Q150 92 64 136 Z" fill="url(#cable)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M66 130 Q100 186 150 196 L146 222 Q90 208 56 140 Z" fill="url(#cable)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M234 130 Q200 186 150 196 L154 222 Q210 208 244 140 Z" fill="url(#cable)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <ellipse cx="150" cy="204" rx="20" ry="16" fill="#2e8bff" stroke="#0b0228" stroke-width="4"/>
-          <!-- sleeve ends hanging from the knot -->
-          <path d="M138 216 L126 262 L146 266 L152 220 Z" fill="url(#cable)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M162 216 L176 260 L156 266 L150 220 Z" fill="url(#cable)" stroke="#0b0228" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M126 262 L146 266" stroke="#2e8bff" stroke-width="7"/>
-          <path d="M176 260 L156 266" stroke="#2e8bff" stroke-width="7"/>
-          <!-- AE crest on the chest -->
-          <image href="../assets/aef-mark.png" x="178" y="232" width="34" height="22"/>
-          <!-- sparkles -->
-          <path d="M44 56 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5 Z" fill="#2e8bff"/>
-          <path d="M252 272 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4 Z" fill="#0ee8c8"/>
-        </svg>
-      </div>
-      <figcaption>The Look</figcaption>
-    </figure>
-
     <figure class="polaroid polaroid--venue">
       <span class="tape" aria-hidden="true"></span>
       <div class="img" role="img" aria-label="CORBETT'S at dusk, aerial view"></div>
@@ -230,7 +167,7 @@
     </figure>
 
     <div class="details">
-      <div class="row"><small>When</small><div><strong>Friday, Dec 11</strong><em>2026</em></div></div>
+      <div class="row"><small>When</small><div><strong>Friday, Dec 11, 2026</strong></div></div>
       <div class="row"><small>Time</small><div><strong>7:30 &ndash; 11:30 PM</strong></div></div>
       <div class="row"><small>Where</small><div><strong>CORBETT&rsquo;S</strong><em>340 N. 6th Ave &middot; Downtown Tucson</em></div></div>
     </div>
